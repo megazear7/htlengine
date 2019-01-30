@@ -24,7 +24,7 @@ const VariableBinding = require('../commands/VariableBinding');
 module.exports = class ResourcePlugin extends Plugin {
   beforeChildren(stream) {
     const variableName = this.pluginContext.generateVariable('resourceContent');
-    // Could this use the Compiler.compile() method to compile the provided file?
+    // Could this use the Compiler.compile() method to compile the provided file instead of just setting its contents to the 'resource' variable?
     const runtimeCall = new RuntimeCall('resource', this._expression.root);
     stream.write(new VariableBinding.Global(variableName, runtimeCall));
     stream.write(new OutputVariable(variableName));
