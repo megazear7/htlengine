@@ -29,7 +29,7 @@
 ===
 <section><span>Resource selector</span></section>
 #
-### slightly resource function with selectors array option 
+### slightly resource function with selectors array option
 #
 <section data-sly-resource="${'resource_spec/test_page.html' @ selectors=['selector']}"></section>
 ===
@@ -66,3 +66,10 @@
 <section><span>Resource</span></section>
 #
 ###
+#
+### sightly resource function used twice recursively
+#
+<section data-sly-resource="resource_spec/recursion_test.html"></section>
+===
+<div data-sly-resource="test_page.html"><span>Resource</span></div>
+#
